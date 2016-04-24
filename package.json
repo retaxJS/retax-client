@@ -37,7 +37,6 @@
   "dependencies": {
     "builder-ts-library": "~0.0.6",
     "inversify": "^2.0.0-beta.1",
-    "reflect-metadata": "^0.1.3",
     "retax-core": "^1.0.0-alpha.1",
     "retax-di": "^1.0.0-alpha.0"
   },
@@ -49,11 +48,13 @@
     "react-redux": "^4.4.5",
     "react-router-redux": "^4.0.2",
     "react-router": "^2.2.4",
-    "react": "^0.14.0 || ^15.0.0-0"
+    "react": "^0.14.0 || ^15.0.0-0",
+    "reflect-metadata": "^0.1.3"
   },
   "peerDependencies": {
     "react-dom": "^0.14.0 || ^15.0.0-0",
     "react-router": "^2.2.4",
+    "reflect-metadata": "^0.1.3",
     "retax-core": "^1.0.0-alpha.1",
     "retax-di": "^1.0.0-alpha.0"
   }
