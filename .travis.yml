@@ -1,6 +1,14 @@
 language: node_js
 node_js:
-  - v5
+- v5
 before_install: npm install -g codecov
 after_success:
-  - codecov -e TRAVIS_NODE_VERSION
+- codecov -e TRAVIS_NODE_VERSION
+deploy:
+  provider: npm
+  email: hourliert@gmail.com
+  api_key:
+    secure: XU+99CWK7/nWgMlk6B/ZDhnC0Wb5Z3XtrnFD05WuV+p26QqT6OOEwUoKrbkNtahmjQd37xSwDOMItd+Hx7PEl0v3l05ptaaHasmEGSrv5mp0QlG73MsuaI4CVJXOs6XFrKu+L7TH8FIpbk48GfVjxSm5C1dmlTrNGcPyx6m8a6DRRTVEkAD3/86Vvmza9oyfu0HiFGMqW3LzKS0YumKx3CeHNWZ3IK0rk/9FEuzQjfzAbtsIrErpaEexvmtAyPR8DdamcGESH/ZUjp3kZH6ytXY10eH3irwKkWF+h0NfVtIuJyiSFlmGdVhSjsRm0oaPGJyxedSms7p/HRbTqAvxdjpUP+1FYqtq/R2af4HVE74kXGaJHzlwZacimBfDFQ8i0LkSjvBLsTk7VnQv18vFqhjZ85GSh4rgy5X4gOakhYZF+wkaY9qEW+pWbx4wDxV6PXmEdTnGWAz2+AvI5ozQXLzQd/6hPAE7S7/gPidhxWOe5p9/fZ4nUXXIqdduYRQxPP6RymO92144hwulizljrzq8eYn1z/mgccd+BZDfXzS3voqOywSi7brvAEXiWNY9cNOYbg1pqgN97rdDdTHz1ec+MULpgMwkyOE3zZeXccNgFOD8ByCfOe7NWS2qPHV00/bDh+xUFq946fEGbL0GYaXogY9IjdL9rBucEMnmvTg=
+  on:
+    tags: true
+    repo: retaxJS/retax-client
