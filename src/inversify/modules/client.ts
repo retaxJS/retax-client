@@ -1,4 +1,4 @@
-import { IKernel } from 'inversify';
+import { KernelModule, interfaces } from 'inversify';
 
 import {
   IClientBootstrapper, ClientBootstrapper,
@@ -8,6 +8,6 @@ import {
   CLIENT_BOOTSTRAPPER,
 } from '../identifiers';
 
-export default function clientModule(kernel: IKernel): void {
-  kernel.bind<IClientBootstrapper>(CLIENT_BOOTSTRAPPER).to(ClientBootstrapper);
-}
+export default new KernelModule((bind: interfaces.Bind) => {
+  bind<IClientBootstrapper>(CLIENT_BOOTSTRAPPER).to(ClientBootstrapper);
+});

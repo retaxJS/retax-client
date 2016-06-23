@@ -8,7 +8,7 @@ import {
   IKernelMediator, KERNEL_MEDIATOR,
 } from 'retax-di';
 import {
-  clientModule, contextModuleFactory, lifecycleModuleFactory,
+  commonModule, clientModule, contextModuleFactory, lifecycleModuleFactory,
   IInversifyKernelFacade,
   IRetaxConfig,
   MEDIATOR, IRetaxMediator,
@@ -35,6 +35,7 @@ export default class ClientBootstrapper implements IClientBootstrapper {
 
     // create IOC kernel
     this._kernelFacade = this._kernelMediator.create([
+      commonModule,
       clientModule,
       contextModuleFactory({ history, retaxConfig: this._retaxConfig }),
       lifecycleModuleFactory(this._retaxConfig.lifecycle),
